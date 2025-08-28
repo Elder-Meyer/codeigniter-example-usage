@@ -1,3 +1,11 @@
-.env
-writable/
-writable/logs/log-2025-08-27.log
+/.env
+/vendor/
+composer.lock
+writable/*
+*.cache
+*.log
+
+/vscode/
+
+/spark
+/build
