@@ -17,3 +17,7 @@ $routes->view('productosList/(:alpha)', 'lista_productos');
 $routes->group('admin', static function($routes){
     $routes->get('/productos', 'Productos::index');
 });
+
+// este es un ejemplo de rutas considerando el portafolio elder-meyer.web.app/projects
+$routes->get('/proyectos', 'Portafolio::index');
+$routes->get('/proyectos/(:any)', 'Portafolio::show/$1');
