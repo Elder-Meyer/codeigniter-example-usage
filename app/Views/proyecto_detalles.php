@@ -6,7 +6,7 @@
     <title><?= esc($project) ?></title>
 </head>
 <body>
-    <button onclick="history.back()">Lista de proyectos</button>
+    <a href=<?php echo base_url("/proyectos") ?> >Proyectos</a>
     <div>
         </h1>Detalles del proyecto</h1>
         <p>Proyecto: <?= esc($project) ?></p>

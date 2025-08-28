@@ -7,17 +7,12 @@
 </head>
 <body>
     <div>
-        <h1>Pagina de proyectos</h1>
+        <h1>Pagina de proyectos (upgrade)</h1>
+        <a href=<?php echo base_url() ?> >Volver a pagina de inicio</a>
         <ul>
             <?php 
-                $proyectos = [
-                    ["app-caih", "App CAIH"], 
-                    ["corazon-huasteco", "Corazón Huasteco"], 
-                    ["dulce-delicia", "Dulce Delicia"]
-                ];
-
                 foreach($proyectos as $proyecto){
-                    echo "<li><a href='proyectos/$proyecto[0]'>Proyecto $proyecto[1]</a></li>";
+                    echo "<li><a href='" . base_url("proyectos/" . $proyecto['slug']) . "'>" . esc($proyecto['nombre']) . "</a></li>";
                 }
             ?>
         </ul>
