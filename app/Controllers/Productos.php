@@ -4,8 +4,17 @@ namespace App\Controllers;
 
 class Productos extends BaseController{
     public function index(){
-        $data = ["titulo" => "Catalogo de productos",
-                 "descripcion" => "Este es el catalgo de productos ¿que esperabas?"];
+        $data = [
+                    "titulo" => "Catalogo de productos",
+                    "descripcion" => "Este es el catalgo de productos ¿que esperabas?",
+                    "productos" => [
+                        ["id" => 11, "nombre" => "Apple MacBook Pro 17\"", "color" => "Silver", "categoria" => "Laptop", "precio" => "$2999"],
+                        ["id" => 16, "nombre" => "Microsoft Surface Pro", "color" => "White", "categoria" => "Laptop PC", "precio" => "$1999"],
+                        ["id" => 32, "nombre" => "Magic Mouse 2", "color" => "Black", "categoria" => "Accessories", "precio" => "$99"],
+                        ["id" => 53, "nombre" => "Google Pixel Phone", "color" => "Gray", "categoria" => "Phone", "precio" => "$799"],
+                        ["id" => 65, "nombre" => "Apple Watch 5", "color" => "Red", "categoria" => "Wearables", "precio" => "$999"],
+                    ]
+                ];
         return view('plantilla/header', $data).
                 view('productos/index', $data).
                 view('plantilla/footer');
