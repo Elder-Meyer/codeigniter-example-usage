@@ -3,8 +3,6 @@
         <?php echo esc($titulo) ?>
     </h1>
     <p><?php echo $descripcion ?></p>
-
-    
 </div>
 
 
@@ -28,48 +26,24 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b border-gray-200">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple MacBook Pro 17"
-                </th>
-                <td class="px-6 py-4">
-                    Silver
-                </td>
-                <td class="px-6 py-4">
-                    Laptop
-                </td>
-                <td class="px-6 py-4">
-                    $2999
-                </td>
-            </tr>
-            <tr class="bg-white border-b border-gray-200">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Microsoft Surface Pro
-                </th>
-                <td class="px-6 py-4">
-                    White
-                </td>
-                <td class="px-6 py-4">
-                    Laptop PC
-                </td>
-                <td class="px-6 py-4">
-                    $1999
-                </td>
-            </tr>
-            <tr class="bg-white">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Magic Mouse 2
-                </th>
-                <td class="px-6 py-4">
-                    Black
-                </td>
-                <td class="px-6 py-4">
-                    Accessories
-                </td>
-                <td class="px-6 py-4">
-                    $99
-                </td>
-            </tr>
+            <?php foreach($productos as $producto): ?>
+                <tr class="bg-white border-b border-gray-200">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        <a class="underline text-blue-700" href="<?php echo base_url("productos/".urlencode($producto['id'])) ?>">
+                            <?php echo $producto['nombre'] ?>
+                        </a>
+                    </th>
+                    <td class="px-6 py-4">
+                        <?php echo $producto['color'] ?>
+                    </td>
+                    <td class="px-6 py-4">
+                        <?php echo $producto['categoria'] ?>
+                    </td>
+                    <td class="px-6 py-4">
+                        <?php echo $producto['precio'] ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
