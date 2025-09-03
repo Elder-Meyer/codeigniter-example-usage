@@ -23,18 +23,19 @@
                 <?php foreach($productos as $producto): ?>
                     <tr class="bg-white border-b border-gray-200">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            <a class="underline text-blue-700" href="<?php echo base_url("productos/".urlencode($producto['id'])) ?>">
-                                <?php echo $producto['nombre'] ?>
+                            <a class="underline text-blue-700" href="<?php echo base_url("productos/".urlencode($producto->codigo)) ?>">
+                                <?php echo $producto->nombre ?>
                             </a>
                         </th>
                         <td class="px-6 py-4">
-                            <?php echo $producto['color'] ?>
+                            <?php echo $producto->codigo ?> <!-- para objetos -->
+                            <!--  echo $producto['codigo']  para arrays -->
                         </td>
                         <td class="px-6 py-4">
-                            <?php echo $producto['categoria'] ?>
+                            <?php echo $producto->nombre ?>
                         </td>
                         <td class="px-6 py-4">
-                            <?php echo $producto['precio'] ?>
+                            <?php echo $producto->stock ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
