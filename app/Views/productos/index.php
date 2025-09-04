@@ -9,13 +9,13 @@
                         Product name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Color
+                        Product code
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Category
+                        Product Name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Price
+                        Stock
                     </th>
                 </tr>
             </thead>
