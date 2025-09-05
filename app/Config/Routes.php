@@ -9,7 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/productos', 'Productos::index');
 // controladores y parametros
 $routes->get('/productos/(:num)', 'Productos::show/$1');
-$routes->get('/productos/(:alpha)/(:num)', 'Productos::cat/$1/$2');
+$routes->get('/productos/transaccion', 'Productos::transaccion');
 // controlador que solo llama a la vista
 $routes->view('productosList/(:alpha)', 'lista_productos');
 
