@@ -36,8 +36,17 @@ class Productos extends BaseController{
     }
 
     public function transaccion(){
-        $this->productoModel->insert();
+        $data = [
+            'codigo' => 'ABCD-0123',
+            'nombre' => 'Camara nikon D3500',
+        ];
 
+        // Inserta un nuevo producto
+        // echo $this->productoModel->insert($data); // retorna el ID insertado
+        // echo $this->productoModel->getInsertID(); // retorna el ID insertado
+
+        // Actualiza un producto
+        echo $this->productoModel->update(7, $data);
     }
 
     public function cat($categoria, $id){
