@@ -6,8 +6,17 @@
         volver
     </a>
     <h2>
-        Detalles del producto: <?php echo esc($id) ?>
+        <strong>Detalles del producto:</strong> <?php echo $producto['nombre']; ?>
     </h2>
+    <p>
+        <strong>Código:</strong> <?php echo $producto['codigo']; ?>
+    </p>
+    <p>
+        <strong>Stock:</strong> <?php echo $producto['stock']; ?>
+    </p>
+    <p>
+        <strong>Almacén:</strong> <?php echo $producto['id_almacen']; ?>
+    </p>
 </div>
 <?php echo $this->endSection(); ?>
 
