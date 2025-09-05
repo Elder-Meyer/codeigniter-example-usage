@@ -9,7 +9,7 @@ class ProductosModel extends Model{
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array'; // array or object
-    protected $useSoftDeletes = false; // si es falso $deletedField no se usa
+    protected $useSoftDeletes = false; // si es falso $deletedField no se usa, si es false el campo se elimina de la tabla
 
     protected $allowedFields = ['codigo', 'nombre', 'stock', 'id_almacen', 'estatus'];
 
@@ -18,7 +18,7 @@ class ProductosModel extends Model{
     protected $dateFormat    = 'datetime'; // datetime, date, int
     protected $createdField  = 'fecha_alta';
     protected $updatedField  = 'fecha_modifica';
-    protected $deletedField  = 'fecha_elimina';
+    protected $deletedField  = ''; // 'fecha_elimina' es el campo que se usa para soft delete, SOLO si useSoftDeletes es TRUE
 }
 
 ?>

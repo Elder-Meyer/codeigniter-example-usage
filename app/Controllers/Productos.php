@@ -41,12 +41,14 @@ class Productos extends BaseController{
             'nombre' => 'Camara nikon D3500',
         ];
 
-        // Inserta un nuevo producto
-        // echo $this->productoModel->insert($data); // retorna el ID insertado
-        // echo $this->productoModel->getInsertID(); // retorna el ID insertado
+        // funciones (casi) crud
+        echo $this->productoModel->delete(6); // elimina un producto (suavemente) sigue existiendo en la bd
+        // echo $this->productoModel->purgeDeleted(); // elimina definitivamente los productos eliminados suavemente
+        // echo $this->productoModel->insert($data); // inserta un producto
+        //echo $this->productoModel->update(7, $data); // Actualiza un producto
 
-        // Actualiza un producto
-        echo $this->productoModel->update(7, $data);
+
+        // echo $this->productoModel->getInsertID(); // retorna el ID insertado
     }
 
     public function cat($categoria, $id){
