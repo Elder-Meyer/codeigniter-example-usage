@@ -17,6 +17,11 @@
     <p>
         <strong>Almacén:</strong> <?php echo $producto['id_almacen']; ?>
     </p>
+    <?php 
+        echo "<pre>";
+        print_r($producto);
+        echo "</pre>";
+    ?>
 </div>
 <?php echo $this->endSection(); ?>
 
