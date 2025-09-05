@@ -9,8 +9,9 @@
     <body>    
         <?php echo $this->include('plantilla/menu'); ?>
 
-        <?php echo $this->renderSection("contenido"); ?>
-
+        <div class="min-h-screen">
+            <?php echo $this->renderSection("contenido"); ?>
+        </div>
 
         <footer class="bg-white rounded-lg shadow-sm m-4">
             <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
